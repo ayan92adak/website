@@ -1,7 +1,10 @@
-console.log("Helllo world from javascripts");
-var number1 = '35';
-var number2 = '40';
+var ourHeadlines = document.getElementById("our_hdl");
+var listitems = document.getElementById("our_list").getElementsByTagName("li");
 
-var colors = ['red', 'blue', 'green'];
+for(var i=0;i<listitems.length;i++) {
+    listitems[i].addEventListener("click", activateItem);
+}
 
-alert(colors[1]);
+function activateItem(){
+    our_hdl.innerHTML = this.innerHTML;
+}
